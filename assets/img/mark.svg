@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 92" fill="none">
+  <defs>
+    <linearGradient id="kx" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3ff0a0"/>
+      <stop offset="1" stop-color="#1e9bff"/>
+    </linearGradient>
+  </defs>
+  <!-- frame -->
+  <path d="M8 74V24L24 10h72l16 14v50" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+  <!-- base -->
+  <path d="M4 80h112l-8 7H12z" fill="currentColor"/>
+  <!-- pillars: front face, side face, top -->
+  <g>
+    <path d="M22 30h13v44H22z" fill="currentColor"/>
+    <path d="M35 30l8-6v44l-8 6z" fill="url(#kx)"/>
+    <path d="M22 30l8-6h13l-8 6z" fill="currentColor" opacity=".55"/>
+  </g>
+  <g>
+    <path d="M50 22h13v52H50z" fill="currentColor"/>
+    <path d="M63 22l8-6v52l-8 6z" fill="url(#kx)"/>
+    <path d="M50 22l8-6h13l-8 6z" fill="currentColor" opacity=".55"/>
+  </g>
+  <g>
+    <path d="M78 30h13v44H78z" fill="currentColor"/>
+    <path d="M91 30l8-6v44l-8 6z" fill="url(#kx)"/>
+    <path d="M78 30l8-6h13l-8 6z" fill="currentColor" opacity=".55"/>
+  </g>
+</svg>
