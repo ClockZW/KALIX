@@ -41,6 +41,22 @@ document.querySelectorAll('.card').forEach((card) => {
   });
 });
 
+// Gallery: open a photo bigger
+const lightbox = document.getElementById('lightbox');
+const lbImg = lightbox.querySelector('img');
+const lbCap = lightbox.querySelector('.lb-cap');
+document.querySelectorAll('.shot button').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const img = btn.querySelector('img');
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lbCap.textContent = btn.closest('.shot').querySelector('strong').textContent;
+    lightbox.showModal();
+  });
+});
+lightbox.querySelector('.lb-close').addEventListener('click', () => lightbox.close());
+lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.close(); });
+
 // Quote form: open WhatsApp with the message filled in
 const form = document.getElementById('quote-form');
 const error = document.getElementById('form-error');

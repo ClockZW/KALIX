@@ -157,6 +157,22 @@ h3 { font-size: 1.12rem; font-weight: 700; }
 .step h3 { margin-bottom: 6px; }
 .step p { font-size: .93rem; color: var(--muted); }
 
+/* ---------- gallery ---------- */
+.gallery { columns: 3; column-gap: 20px; }
+.shot { position: relative; break-inside: avoid; margin-bottom: 20px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); }
+.shot button { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
+.shot img { width: 100%; height: auto; transition: transform .6s ease; }
+.shot:hover img { transform: scale(1.04); }
+.shot figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 18px 16px; background: linear-gradient(transparent, rgba(7,17,31,.92)); pointer-events: none; }
+.shot figcaption strong { display: block; font: 700 1rem var(--head); }
+.shot figcaption span { font-size: .84rem; color: var(--muted); }
+
+.lightbox { margin: auto; padding: 0; border: 0; background: none; max-width: min(92vw, 720px); max-height: 92vh; overflow: visible; color: var(--ink); }
+.lightbox::backdrop { background: rgba(4,10,20,.88); backdrop-filter: blur(6px); }
+.lightbox img { max-height: 80vh; width: auto; margin-inline: auto; border-radius: 18px; }
+.lb-cap { text-align: center; margin-top: 12px; font-weight: 600; }
+.lb-close { position: absolute; top: -14px; right: -14px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--bg-2); color: var(--ink); font-size: 1.6rem; line-height: 1; cursor: pointer; }
+
 /* ---------- quote & contact ---------- */
 .contact-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px; align-items: stretch; }
 .quote { padding: 38px; border-radius: 28px; display: grid; gap: 16px; }
@@ -204,6 +220,7 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--g
 @media (max-width: 1024px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: repeat(2, 1fr); }
+  .gallery { columns: 2; }
 }
 @media (max-width: 880px) {
   .menu { display: block; }
@@ -226,6 +243,8 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--g
 }
 @media (max-width: 560px) {
   .cards, .steps, .row { grid-template-columns: 1fr; }
+  .gallery { columns: 1; }
+  .lb-close { top: 8px; right: 8px; }
   .quote { padding: 26px 20px; }
   .contact-card { padding: 22px 16px; }
   .brand-mark { width: 44px; height: 34px; }
